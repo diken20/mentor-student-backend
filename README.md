@@ -1,6 +1,8 @@
 Mentor–Student Management Backend
 
 A RESTful backend API for managing mentors and students, built using Node.js, Express, and MongoDB. Developed as part of an internship technical task, this project demonstrates full-stack backend development, including authentication, database integration, and deployment.
+Git hub
+https://github.com/diken20/mentor-student-backend
 
 Live Demo
 
