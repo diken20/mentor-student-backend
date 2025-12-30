@@ -1,35 +1,44 @@
-.md
-# Mentor-Student Management System API
+Mentor–Student Management Backend
 
-Backend-only REST API for mentors to manage students, assign tasks, and review submissions. Built with Node.js/Express and MongoDB.
+A RESTful backend API for managing mentors and students, built using Node.js, Express, and MongoDB. Developed as part of an internship technical task, this project demonstrates full-stack backend development, including authentication, database integration, and deployment.
 
-## Features
-- **Auth**: JWT login for mentors.
-- **Students**: CRUD operations (add/edit/delete students).
-- **Tasks**: Create and assign tasks to students.
-- **Submissions**: Submit/review/mark complete with feedback/progress tracking.
-- **Bonus**: Swagger API docs at `/api-docs`.
+Live Demo
 
-## Architecture
-- **DB**: MongoDB with Mongoose (schemas: Mentor 1:M Student, Task M:M Student, Submission 1:1 Task/Student).
-- **API**: RESTful endpoints under `/api/*`, protected with JWT.
-- **Security**: bcrypt hashing, helmet, input validation.
-- Relationships: Populated queries for efficiency.
+https://mentor-student-backend-1-4xyc.onrender.com
 
-## Setup Instructions
-1. Clone: `git clone https://github.com/yourusername/mentor-student-api.git`
-2. Install: `npm install`
-3. Env: Copy `.env.example` to `.env`, add MONGODB_URI (MongoDB Atlas) and JWT_SECRET.
-4. Run: `npm run dev`
-5. Test: `npm test`
+Tech Stack
+Node.js – Server-side runtime
+Express.js – Web framework for building REST APIs
+MongoDB Atlas – Cloud database
+Mongoose – ODM for MongoDB
+JWT Authentication – Secure user authentication
+Render – Hosting platform
 
-## Demo Credentials
-- Login: POST `/api/auth/login` with { "email": "demo@mentor.com", "password": "demo123" } (seed this in DB if needed).
+Project Architecture
 
-## Live URL
-https://yourapp.onrender.com/api-docs
+server.js – Application entry point
+src/config/ – Database connection setup
+src/models/ – Mongoose schemas for mentors and students
+src/controllers/ – Business logic for API operations
+src/routes/ – RESTful API endpoints
+src/middlewares/ – Authentication and authorization
 
-## Tech Stack
-- Node.js/Express
-- MongoDB/Mongoose
-- JWT/Bcrypt
+Key Features
+
+Mentor registration and login
+JWT-based authentication for secure access
+Add and manage students assigned to mentors
+Fetch mentor and student data
+Fully deployed backend with public access
+
+Demo Credentials
+
+Use these credentials to explore the API functionality:
+
+Mentor Account:
+Email: demo@mentor.com
+Password: demo123
+
+Student Account:
+Email: student@mentor.com
+Password: student123
